@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/output.css')
+  body
+    main
+      header(class='flex bg-[#12161b] justify-between px-7 py-5 text-white')
+        h1(class='font-semibold text-lg text-[#D91656]') Savor & Spice
+        nav 
+          ul(class='flex gap-8') 
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/") Home
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/about") About
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/blog") Blog
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/events") Events
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/gallery") Gallery
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/services") services
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/form") Register
+            li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
+              a(href="/drinks") Drinks
+      
+    block content
+      
