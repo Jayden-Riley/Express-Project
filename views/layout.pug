@@ -3,12 +3,16 @@ html
   head
     title= title
     link(rel='stylesheet', href='/output.css')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
   body
     main
       header(class='flex bg-[#12161b] justify-between px-7 py-5 text-white')
         h1(class='font-semibold text-lg text-[#D91656]') Savor & Spice
-        nav 
-          ul(class='flex gap-8') 
+        button#menu-btn(type="button" class="flex lg:hidden focus:outline-none")
+          i(class="bi bi-list")
+          i(class="bi bi-x hidden")
+        nav(class="hidden lg:block ")
+          ul(class='flex flex-col lg:flex-row gap-8') 
             li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
               a(href="/") Home
             li(class="hover:text-[#D91656] transition-colors duration-500  ease-in-out") 
@@ -27,4 +31,17 @@ html
               a(href="/drinks") Drinks
       
     block content
-      
+    script.
+      document.addEventListener('DOMContentLoaded', function() {
+          const menuBtn = document.querySelector('#menu-btn'); // Select the button using its ID
+          const nav = document.querySelector('nav'); // Select the nav element
+          const hamburgerIcon = menuBtn.querySelector('.bi-list'); // Select the hamburger icon
+          const closeIcon = menuBtn.querySelector('.bi-x'); // Select the close icon
+
+          menuBtn.addEventListener('click', function() {
+              console.log('Menu button clicked'); // Debugging line
+              nav.classList.toggle('hidden'); // Toggle the hidden class for mobile
+              hamburgerIcon.classList.toggle('hidden'); // Toggle the hamburger icon
+              closeIcon.classList.toggle('hidden'); // Toggle the close icon
+          });
+      });

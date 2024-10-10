@@ -2,19 +2,19 @@ extends layout
 block content
 
     section(class="bg-[#151c26] ")
-        div(class="border-2 border-transparent rounded-lg shadow-xl shadow-black grid grid-cols-2 items-center text-white h-screen max-w-5xl mx-auto max-h-5xl")     
-            div(class="mb-5 mx-4 w-full  pt-32 ") 
+        div(class="border-2 border-transparent rounded-lg shadow-xl shadow-black grid lg:grid-cols-2 items-center text-white h-screen max-w-6xl  mx-auto ")     
+            div(class="mb-5 lg:mx-4 w-full px-10 pt-32 ") 
                 h1(class="text-[#D91656] text-5xl font-semibold") Welcome! 
                 p(class="mt-10") Where every meal is crafted with passion and every bite tells a story. Whether you’re here to indulge in our signature dishes like the Classic Harvest Burger, Butter Chicken, or our flavorful Meat Platter, we promise an unforgettable dining experience. Sit back, relax, and let us take you on a culinary journey you’ll savor with every spice. Enjoy!
                 button(class="border border-transparent bg-[#e9a556] px-10  py-1 text-white mt-10 rounded-tl-xl rounded-br-xl hover:bg-[#D91656] transition-colors duration-500  ease-in-out") Book Now
             div(class=" w-full  ")
-                div(class="border-2 rounded-lg border-transparent  py-16 mx-10 justify-center bg-[#12161b] shadow-md shadow-black")
+                div(class="border-2 border-transparent rounded-lg  py-16 lg:mx-10 justify-center bg-[#12161b] shadow-md shadow-black mx-32 -mt-56 lg:-mt-0")
                     h2(class="text-3xl text-[#D91656] font-semibold text-center px-10 ") Sign In
-                    form(class="max-w-xs mx-auto")
-                        div(class=" mt-5 w-ful l")
-                            label(class="font-semibold") Username
-                            input(type="text" class="w-full bg-transparent border border-gray-400 bg-[#151c26] rounded-lg" placeholder="John Doe")
+                    form(method="post" class="max-w-xs mx-auto")
                         div(class=" mt-5 w-full")
+                            label(for="name" class="font-semibold") Username
+                            input(type="text" id="name" name="name" class="w-full bg-transparent border border-gray-400 bg-[#151c26] rounded-lg" placeholder="John Doe")
+                        div(for="password" class=" mt-5 w-full")
                             label(class="font-semibold") Password
-                            input(type="text" class="w-full bg-transparent border border-gray-400 bg-[#151c26] rounded-lg" placeholder="123..")
-                        button(class="border rounded-lg w-full border-transparent bg-[#e9a556] px-10  py-1 text-white mt-6  hover:bg-[#D91656] transition-colors duration-500  ease-in-out") Submit
+                            input(type="text" id="password" name="password" class="w-full bg-transparent border border-gray-400 bg-[#151c26] rounded-lg" placeholder="123..")
+                        button(class="border rounded-lg w-full border-transparent bg-[#e9a556] px-10  py-1 text-white mt-6  hover:bg-[#D91656] transition-colors duration-500  ease-in-out") Submit 

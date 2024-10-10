@@ -3,16 +3,16 @@ block content
   section(class='')
     div(class="w-full h-screen bg-[url('https://wallpaperaccess.com/full/826922.jpg')] bg-cover bg-center bg-black/50 bg-blend-overlay grid items-center")
       div(class=" ")
-      div(class="px-8 max-w-lg ")
-        h1(class="text-5xl font-bold text-[#D91656]") Flavors Beyond Borders
-        p(class="text-white text-xl mt-5")  we take your palate on a global adventure, blending rich flavors with vibrant, aromatic spices from around the world. Our menu is a celebration of bold, creative cuisine, offering everything from comforting classics to innovative fusion dishes that ignite the senses. With a warm and inviting atmosphere
-        button(class="border border-transparent bg-[#e9a556] px-10  py-1 text-white mt-24 rounded-tl-xl rounded-br-xl hover:bg-[#D91656] transition-colors duration-500  ease-in-out") hello
-    ul(class="grid grid-cols-3 gap-4 bg-[#151c26] text-gray-400 ")
+      div(class="px-8 max-w-2xl mx-auto text-center lg:max-w-lg lg:mx-0 lg:text-left -mt-20 lg:-mt-0")
+        h1(class="lg:text-5xl text-6xl font-bold text-[#D91656]") Flavors Beyond Borders
+        p(class="text-white text-3xl lg:text-xl mt-5")  we take your palate on a global adventure, blending rich flavors with vibrant, aromatic spices from around the world. Our menu is a celebration of bold, creative cuisine, offering everything from comforting classics to innovative fusion dishes that ignite the senses. With a warm and inviting atmosphere
+        button(class="border border-transparent bg-[#e9a556] px-16 py-2 lg:px-10  lg:py-1 text-white mt-24 rounded-tl-xl rounded-br-xl hover:bg-[#D91656] transition-colors duration-500  ease-in-out") hello
+    ul(class="grid md:grid-cols-2  lg:grid-cols-3 gap-4 bg-[#151c26] text-gray-400 ")
       each val in data
         li(class=" mx-5 mt-7 text-lg ")
           a(href=val.url)
             h2= val.name
           p= val.title 
           p= val.restaurantChain
-          img(src=val.image, class="w-full border-transparent rounded shadow-lg shadow-black mt-3")
-          button(class="border-2 border-transparent mt-5 text-white rounded-lg px-3 bg-orange-400 py-1 shadow-md shadow-black hover:bg-[#D91656] transition-colors duration-500  ease-in-out") order Now 
+          img(src=val.image, class=" lg:w-full md:w-full border-transparent rounded shadow-lg shadow-black mt-3 border")
+          button(class="border-2 border-transparent mt-5 text-white rounded-lg px-3 bg-orange-400 py-1 shadow-md shadow-black hover:bg-[#D91656] transition-colors duration-500  ease-in-out ") order Now 

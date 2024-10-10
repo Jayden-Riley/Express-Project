@@ -17,6 +17,11 @@ let __fileName = fileURLToPath(import.meta.url)
 console.log(__fileName)
 let __dirName= path.dirname(__fileName)
 
+
+// Middleware to parse JSON and URL-encoded form data
+app.use(express.json());  // For parsing JSON data
+app.use(express.urlencoded({ extended: true }));  // For parsing form data (x-www-form-urlencoded)
+
 app.use(express.static('public'))
 app.set('views', './views')
 app.set('view engine', 'pug');
@@ -77,6 +82,26 @@ app.get('/food', (req, res) => {
 })
 
 
+app.get('/about',(req,res)=>{
+    res.send("Ok");
+
+})
+app.post("/form", (req, res) => {
+  console.log("Form received");
+
+  // Destructure the request body
+  let { name, password } = req.body;
+
+  console.log({ name });
+  console.log({ password });
+
+  // Do something with the form data, e.g., validation
+  if (!name || !password) {
+    return res.status(400).send("All fields are required.");
+  }
+
+  res.send("Form submission successful!");
+});
 
 
 // catch 404 and forward to error handler
